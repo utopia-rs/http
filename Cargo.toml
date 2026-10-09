@@ -1,0 +1,21 @@
+[package]
+name = "utopia-http"
+description = "Lean HTTP server, router and request/response types with Utopia semantics."
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "BSD-3-Clause"
+
+[dependencies]
+brotli = { version = "8", default-features = false, features = ["std"] }
+bytes = "1"
+flate2 = "1"
+form_urlencoded = "1"
+http = "1"
+http-body-util = "0.1"
+hyper = { version = "1", features = ["server", "http1"] }
+hyper-util = { version = "0.1", features = ["tokio"] }
+serde_json = { version = "1", features = ["raw_value", "preserve_order", "float_roundtrip"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync", "signal"] }
+tracing = "0.1"
+zstd = { version = "0.13", default-features = false }
