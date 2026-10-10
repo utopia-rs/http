@@ -1,6 +1,6 @@
 [package]
 name = "utopia-http"
-description = "Utopia HTTP for Rust: routes, hooks, params with validators, requests and responses with utopia-php/http semantics, on hyper."
+description = "An HTTP framework on hyper: routes, hooks, parameters with validators, requests and responses."
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.88"
@@ -27,3 +27,6 @@ zstd = { version = "0.13", default-features = false }
 
 [dev-dependencies]
 tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync", "signal", "rt", "io-util"] }
+
+[package.metadata.utopia]
+php-sync = "18a66249caf061b011d9eb3c97afbdba668be4c1"
