@@ -7,9 +7,7 @@ rust-version = "1.88"
 license = "BSD-3-Clause"
 
 [dependencies]
-brotli = { version = "8", default-features = false, features = ["std"] }
 bytes = "1"
-flate2 = "1"
 futures-util = { version = "0.3", default-features = false, features = ["std", "async-await-macro"] }
 http = "1"
 http-body-util = "0.1"
@@ -21,9 +19,9 @@ serde_json = { version = "1", features = ["raw_value", "preserve_order", "float_
 thiserror = "2"
 tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync", "signal"] }
 tracing = "0.1"
+utopia-compression = { version = "0.1.0", git = "https://github.com/utopia-rs/compression" }
 utopia-system = { version = "0.1.0", git = "https://github.com/utopia-rs/system" }
 utopia-validators = { version = "0.1.0", git = "https://github.com/utopia-rs/validators" }
-zstd = { version = "0.13", default-features = false }
 
 [dev-dependencies]
 tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync", "signal", "rt", "io-util"] }
